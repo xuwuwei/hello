@@ -7,7 +7,7 @@
     <groupId>com.xumingxun.spring.hello</groupId>
     <artifactId>hello</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -20,5 +20,17 @@
             <version>2.3.4.RELEASE</version>
         </dependency>
     </dependencies>
+    <!-- jar -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
